@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MooTV 管理后台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>MooTV 管理后台</h1>
+      <nav>
+        <a href="index.html">首页</a>
+        <a href="admin.html" class="active">管理员</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="admin-login" class="panel">
+        <h2>管理员登录</h2>
+        <p>仅管理员需要登录，普通用户无需账号即可浏览和观看视频。</p>
+        <form id="login-form" class="stack">
+          <label>
+            用户名
+            <input type="text" id="username" placeholder="admin" required />
+          </label>
+          <label>
+            密码
+            <input type="password" id="password" placeholder="请输入管理员密码" required />
+          </label>
+          <button type="submit">登录</button>
+        </form>
+        <p class="hint">演示账号：admin / mootv123</p>
+        <p id="login-msg" class="msg"></p>
+      </section>
+
+      <section id="admin-dashboard" class="panel hidden">
+        <div class="section-header">
+          <h2>视频管理</h2>
+          <button id="logout-btn" class="danger">退出登录</button>
+        </div>
+
+        <form id="video-form" class="stack">
+          <label>
+            视频标题
+            <input type="text" id="video-title" required />
+          </label>
+          <label>
+            视频简介
+            <textarea id="video-desc" rows="3" required></textarea>
+          </label>
+          <label>
+            视频链接（如 B 站 / YouTube）
+            <input type="url" id="video-url" required />
+          </label>
+          <label>
+            缩略图链接
+            <input type="url" id="video-thumb" required />
+          </label>
+          <button type="submit">新增视频</button>
+        </form>
+
+        <h3>已发布视频</h3>
+        <ul id="admin-video-list" class="admin-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

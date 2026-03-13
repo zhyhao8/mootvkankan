@@ -1,0 +1,127 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --primary: #2563eb;
+  --danger: #dc2626;
+  --border: #dbe3ef;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "PingFang SC", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: #0b1220;
+  color: #fff;
+}
+
+.topbar h1 { margin: 0; font-size: 20px; }
+
+nav a {
+  color: #cbd5e1;
+  text-decoration: none;
+  margin-left: 14px;
+}
+
+nav a.active,
+nav a:hover { color: #fff; }
+
+main { max-width: 980px; margin: 24px auto; padding: 0 16px; }
+
+.hero,
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 14px;
+}
+
+.video-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.thumb {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.video-body { padding: 12px; }
+.video-body h4 { margin: 0 0 8px; }
+.video-body p { margin: 0 0 10px; color: var(--muted); }
+
+.watch-btn,
+button {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.stack { display: grid; gap: 10px; }
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.admin-list li {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.danger {
+  background: var(--danger);
+  border-color: var(--danger);
+}
+
+.hidden { display: none; }
+.msg { min-height: 22px; }
+.hint { color: var(--muted); font-size: 14px; }
